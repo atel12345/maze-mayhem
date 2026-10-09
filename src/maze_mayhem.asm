@@ -1376,7 +1376,7 @@ ReadController:
 ; Collision: ONE routine for every moving thing
 ;
 ; BoxHitsWall: newX,newY = candidate top-left of an 8x8 sprite.
-;   A=0 (Z set)  -> its 6x6 hitbox (pixels 1..6) is clear
+;   A=0 (Z set)  -> its 4x4 hitbox (pixels 2..5) is clear
 ;   A=1 (Z clear)-> some corner touches a wall / leaves the screen
 ;   Preserves X.
 ; ------------------------------------------------------------
