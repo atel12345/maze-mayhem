@@ -40,10 +40,12 @@ BTN_DOWN     = %00000100
 BTN_LEFT     = %00000010
 BTN_RIGHT    = %00000001
 
-; --- hitbox: 8x8 sprite, 6x6 box inset 1 px (pixels 1..6) ---
-HB_LO        = 1
-HB_HI        = 6
-HIT_DIST     = 6         ; two boxes overlap when |dx| < 6 and |dy| < 6
+; --- hitbox: 8x8 sprite, 4x4 box inset 2 px (pixels 2..5) ---
+; The maze has one-tile-wide openings. Keep the collision box away from
+; diagonal wall corners so those openings remain traversable.
+HB_LO        = 2
+HB_HI        = 5
+HIT_DIST     = 4         ; two boxes overlap when |dx| < 4 and |dy| < 4
 FIRE_SPEED   = 4         ; player fireball px/frame (moved 1 px at a time)
 
 ; --- maze ---
